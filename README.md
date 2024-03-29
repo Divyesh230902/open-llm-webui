@@ -1,4 +1,4 @@
-# Open WebUI (Formerly Ollama WebUI) 👋
+# Open LLM WebUI 👋
 
 ![GitHub stars](https://img.shields.io/github/stars/open-webui/open-webui?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/open-webui/open-webui?style=social)
@@ -11,7 +11,7 @@
 [![Discord](https://img.shields.io/badge/Discord-Open_WebUI-blue?logo=discord&logoColor=white)](https://discord.gg/5rJgQTnV4s)
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/tjbck)
 
-Open WebUI is an extensible, feature-rich, and user-friendly self-hosted WebUI designed to operate entirely offline. It supports various LLM runners, including Ollama and OpenAI-compatible APIs. For more information, be sure to check out our [Open WebUI Documentation](https://docs.openwebui.com/).
+Open LLM WebUI is an extensible, feature-rich, and user-friendly self-hosted WebUI designed to operate entirely offline. It supports various LLM runners, including Ollama and OpenAI-compatible APIs. For more information, be sure to check out our [Open WebUI Documentation](https://docs.openwebui.com/).
 
 ![Open WebUI Demo](./demo.gif)
 
@@ -95,12 +95,12 @@ Don't forget to explore our sibling project, [Open WebUI Community](https://open
 ### Quick Start with Docker 🐳
 
 > [!IMPORTANT]
-> When using Docker to install Open WebUI, make sure to include the `-v open-webui:/app/backend/data` in your Docker command. This step is crucial as it ensures your database is properly mounted and prevents any loss of data.
+> When using Docker to install Open WebUI, make sure to include the `-v open-llm-webui:/app/backend/data` in your Docker command. This step is crucial as it ensures your database is properly mounted and prevents any loss of data.
 
 - **If Ollama is on your computer**, use this command:
 
   ```bash
-  docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+  docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-llm-webui:/app/backend/data --name open-llm-webui --restart always ghcr.io/open-webui/open-webui:main
   ```
 
 - **If Ollama is on a Different Server**, use this command:
@@ -108,7 +108,7 @@ Don't forget to explore our sibling project, [Open WebUI Community](https://open
 - To connect to Ollama on another server, change the `OLLAMA_BASE_URL` to the server's URL:
 
   ```bash
-  docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=https://example.com -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+  docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=https://example.com -v open-llm-webui:/app/backend/data --name open-llm-webui --restart always ghcr.io/open-webui/open-webui:main
   ```
 
 - After installation, you can access Open WebUI at [http://localhost:3000](http://localhost:3000). Enjoy! 😄
@@ -136,10 +136,10 @@ Encountering connection issues? Our [Open WebUI Documentation](https://docs.open
 In case you want to update your local Docker installation to the latest version, you can do it with [Watchtower](https://containrrr.dev/watchtower/):
 
 ```bash
-docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once open-webui
+docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once open-llm-webui
 ```
 
-In the last part of the command, replace `open-webui` with your container name if it is different.
+In the last part of the command, replace `open-llm-webui` with your container name if it is different.
 
 ### Moving from Ollama WebUI to Open WebUI
 
