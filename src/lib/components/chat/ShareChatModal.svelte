@@ -20,7 +20,7 @@
 				show = false;
 			}}
 		>
-			{$i18n.t('Share to OpenWebUI Community')}
+			{$i18n.t('Share to vareximaging Community')}
 		</button>
 
 		<div class="flex justify-center space-x-1 mt-1.5">

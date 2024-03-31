@@ -41,9 +41,9 @@
 	};
 
 	const shareModelfile = async (modelfile) => {
-		toast.success($i18n.t('Redirecting you to OpenWebUI Community'));
+		toast.success($i18n.t('Redirecting you to vareximaging Community'));
 
-		const url = 'https://openwebui.com';
+		const url = 'https://vareximaging.com';
 
 		const tab = await window.open(`${url}/modelfiles/create`, '_blank');
 		window.addEventListener(
@@ -388,11 +388,11 @@
 			</div>
 
 			<div class=" my-16">
-				<div class=" text-2xl font-semibold mb-3">{$i18n.t('Made by OpenWebUI Community')}</div>
+				<div class=" text-2xl font-semibold mb-3">{$i18n.t('Made by vareximaging Community')}</div>
 
 				<a
 					class=" flex space-x-4 cursor-pointer w-full mb-2 px-3 py-2"
-					href="https://openwebui.com/"
+					href="https://vareximaging.com/"
 					target="_blank"
 				>
 					<div class=" self-center w-10">

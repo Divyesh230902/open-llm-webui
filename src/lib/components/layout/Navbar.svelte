@@ -29,8 +29,8 @@
 		const chat = (await getChatById(localStorage.token, $chatId)).chat;
 		console.log('share', chat);
 
-		toast.success($i18n.t('Redirecting you to OpenWebUI Community'));
-		const url = 'https://openwebui.com';
+		toast.success($i18n.t('Redirecting you to vareximaging Community'));
+		const url = 'https://vareximaging.com';
 		// const url = 'http://localhost:5173';
 
 		const tab = await window.open(`${url}/chats/upload`, '_blank');

@@ -25,7 +25,7 @@ try:
 except ImportError:
     log.warning("dotenv not installed, skipping...")
 
-WEBUI_NAME = "Open WebUI"
+WEBUI_NAME = "Varex Imaging Chat Support"
 shutil.copyfile("../build/favicon.png", "./static/favicon.png")
 
 ####################################
@@ -137,12 +137,12 @@ log.setLevel(SRC_LOG_LEVELS["CONFIG"])
 CUSTOM_NAME = os.environ.get("CUSTOM_NAME", "")
 if CUSTOM_NAME:
     try:
-        r = requests.get(f"https://api.openwebui.com/api/v1/custom/{CUSTOM_NAME}")
+        r = requests.get(f"https://api.vareximaging.com/api/v1/custom/{CUSTOM_NAME}")
         data = r.json()
         if r.ok:
             if "logo" in data:
                 url = (
-                    f"https://api.openwebui.com{data['logo']}"
+                    f"https://api.vareximaging.com{data['logo']}"
                     if data["logo"][0] == "/"
                     else data["logo"]
                 )
